@@ -58,8 +58,10 @@ const Footer: React.FC = () => {
         </motion.a>
       </div>
 
-      <p>Created By Andrew</p>
-      <small>&copy; 2023 Threads Infinity Counter. All rights reserved.</small>
+      <p className="text-white">Created By Andrew</p>
+      <small className="text-white">
+        &copy; 2023 Threads Infinity Counter. All rights reserved.
+      </small>
     </div>
   );
 };

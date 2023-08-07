@@ -49,7 +49,7 @@ export default function Home() {
       </motion.div>
 
       <div className="text-center " style={{ marginTop: "5rem" }}>
-        <h1 className={`text-9xl font-bold`}>{counter}</h1>
+        <h1 className={`text-9xl font-bold text-white`}>{counter}</h1>
       </div>
 
       <div
@@ -62,13 +62,13 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h2 className={`mb-3 text-2xl font-semibold text-white`}>
             Threads{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-white`}>
             See the counter in action here!
           </p>
         </a>
