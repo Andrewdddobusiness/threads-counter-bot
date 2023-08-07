@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255; /* White for light mode and text color in both modes */
+  --background-start-rgb: 25, 25, 25; /* Light gray for light mode */
+  --background-end-rgb: 16, 16, 16; /* White for light mode */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0; /* Black for dark mode */
+    --background-start-rgb: 0, 0, 0; /* Black for dark mode */
+    --background-end-rgb: 0, 0, 0; /* Black for dark mode */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: "Russo One", sans-serif;
+}
