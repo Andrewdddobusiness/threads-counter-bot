@@ -13,7 +13,7 @@ const handleScheduledTask = async () => {
     const newCounterValue = currentCounterValue + 1;
 
     // Post thread count
-    await postThread(currentCounterValue);
+    await postThread(newCounterValue);
 
     // Update the counter value
     await updateCounter(newCounterValue);
