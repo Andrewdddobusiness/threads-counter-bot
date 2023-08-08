@@ -1,7 +1,4 @@
-// pages/api/scheduleTask.ts
-import { NextApiRequest, NextApiResponse } from "next";
 import getCounterFromDatabase from "./getFirebaseCount";
-
 import postThread from "./postThread";
 import updateCounter from "./updateCounter";
 
@@ -24,23 +21,8 @@ const handleScheduledTask = async () => {
     console.log("Scheduled task executed successfully.");
   } catch (error) {
     console.error("Error executing scheduled task:", error);
+    throw error; // Rethrow the error to be handled by the caller
   }
 };
 
-// API route handler
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method === "POST") {
-    // Perform any validation if needed (optional)
-
-    // Trigger the scheduled task
-    await handleScheduledTask();
-
-    // Respond with a success message
-    res.status(200).json({ message: "Scheduled task executed." });
-  } else {
-    res.status(405).end(); // Method Not Allowed
-  }
-}
+export default handleScheduledTask;
